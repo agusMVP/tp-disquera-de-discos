@@ -1,220 +1,295 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset = "UTF-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disquera gang store$</title>
-     <style>
+    <style>
         body {
-            background-color: bisque; 
+            background-color: bisque;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .producto {
+            margin-bottom: 16px;
+        }
+
+        #carrito {
+            border: 1px solid #777;
+            border-radius: 8px;
+            background: #fff8e6;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .producto img {
+            display: block;
+            margin-bottom: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .boton-carrito {
+            margin-top: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .carrito-item {
+            margin-bottom: 6px;
+        }
+
+        .opcion-vinilo,
+        .opciones-tapa {
+            margin: 8px 0;
+        }
+
+        #carrito h2 {
+            margin-top: 0;
         }
     </style>
-
-
 </head>
 <body>
-    <div>
     <header>
-        <h1>DISCOS</h1>
+        <h1>Tienda</h1>
     </header>
-   <div>
-    <a href="https://youtu.be/ThfhdnqMVDs?si=58-PlbgHIw1GMJ77" target="_blank">
-     <img src="discos/temor.jpg" width="300" height="300">  
-    </a>
-    <p> Temor - CRO - 3000$ </p>
-    <div class="opcion-vinilo">
-        <label class="etiqueta-vinilo">
-            <input type="checkbox" id="seleccion-vinilo"> 
-             versión en Vinilo(+10000$)
-        </label>
-    </div>
-     <button class="boton-carrito">Agregar al carrito</button>
-</div>
 
-    <div>
-    <a href="https://youtu.be/ThfhdnqMVDs?si=58-PlbgHIw1GMJ77" target="_blank">
-    <img src="discos/religion.jpg" with="300" height="300">
-    </a>
-    <P> Ahora Es Religion - Bardero$  - 7000$</P>
-     <div class="opcion-vinilo">
-        <label class="etiqueta-vinilo">
-            <input type="checkbox" id="seleccion-vinilo"> 
-             versión en Vinilo(+10000$)
-        </label>
-    </div>
-    <button class="boton-carrito">Agregar al carrito</button>
-    </div>
+    <section id="albumes">
+        <h2>Álbumes</h2>
 
-    <div>
-    <a href="https://youtu.be/UAlDKtQzFdk?si=QgH3l2cjVhulSR91" target="_blank">
-    <img src="discos/mdb.jpg" with="300" height="300">
-    </a>
-     <p> MDB vol.1 - CRO - 10000$</p>
-      <div class="opcion-vinilo">
-        <label class="etiqueta-vinilo">
-            <input type="checkbox" id="seleccion-vinilo"> 
-             versión en Vinilo(+10000$)
-        </label>
-    </div>
-     <button class="boton-carrito">Agregar al carrito</button>
-    </div>
+        <div class="producto" data-name="Temor - CRO" data-price="3000" data-vinyl-price="10000">
+            <a href="https://youtu.be/ThfhdnqMVDs?si=58-PlbgHIw1GMJ77" target="_blank">
+                <img src="discos/temor.jpg" width="300" height="300" alt="Temor - CRO">
+            </a>
+            <p>Temor - CRO - 3000$</p>
+            <div class="opcion-vinilo">
+                <label class="etiqueta-vinilo">
+                    <input type="checkbox"> versión en Vinilo (+10000$)
+                </label>
+            </div>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </div>
 
-    <div>
-     <a href="https://youtu.be/3OREFhiFVmk?si=f_3qQT109kUU1uh5" target="_blank">
-    <img src="discos/antezana.jpg" with="300" height="300">
-    </a>
-    <p> antezana247- YSY A - 5000$</p>
-     <div class="opcion-vinilo">
-        <label class="etiqueta-vinilo">
-            <input type="checkbox" id="seleccion-vinilo"> 
-             versión en Vinilo(+10000$)
-        </label>
-    </div>
-    <button class="boton-carrito">Agregar al carrito</button>
-   </div>
+        <div class="producto" data-name="Ahora Es Religion - Bardero$" data-price="7000" data-vinyl-price="10000">
+            <a href="https://youtu.be/ThfhdnqMVDs?si=58-PlbgHIw1GMJ77" target="_blank">
+                <img src="discos/religion.jpg" width="300" height="300" alt="Ahora Es Religion - Bardero$">
+            </a>
+            <p>Ahora Es Religion - Bardero$ - 7000$</p>
+            <div class="opcion-vinilo">
+                <label class="etiqueta-vinilo">
+                    <input type="checkbox"> versión en Vinilo (+10000$)
+                </label>
+            </div>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </div>
 
-   <div>
-    <a href="https://youtu.be/we6IbJrfoGQ?si=_KMeiYXA87-b6-Zd">
-    <img src="discos/real.jpg" with="300" height="300">
-    </a>
-    <p> Real Hasta La Muerte- Anuel AA - 15000$</p>
-     <div class="opcion-vinilo">
-        <label class="etiqueta-vinilo">
-            <input type="checkbox" id="seleccion-vinilo"> 
-             versión en Vinilo(+10000$)
-        </label>
-    </div>
-    <button class="boton-carrito">Agregar al carrito</button>
-      </div>
+        <div class="producto" data-name="MDB vol.1 - CRO" data-price="10000" data-vinyl-price="10000">
+            <a href="https://youtu.be/UAlDKtQzFdk?si=QgH3l2cjVhulSR91" target="_blank">
+                <img src="discos/mdb.jpg" width="300" height="300" alt="MDB vol.1 - CRO">
+            </a>
+            <p>MDB vol.1 - CRO - 10000$</p>
+            <div class="opcion-vinilo">
+                <label class="etiqueta-vinilo">
+                    <input type="checkbox"> versión en Vinilo (+10000$)
+                </label>
+            </div>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </div>
 
-     </div>
+        <div class="producto" data-name="Anteznza247 - YSY A" data-price="5000" data-vinyl-price="10000">
+            <a href="https://youtu.be/3OREFhiFVmk?si=f_3qQT109kUU1uh5" target="_blank">
+                <img src="discos/antezana.jpg" width="300" height="300" alt="Anteznza247 - YSY A">
+            </a>
+            <p>antezana247 - YSY A - 5000$</p>
+            <div class="opcion-vinilo">
+                <label class="etiqueta-vinilo">
+                    <input type="checkbox"> versión en Vinilo (+10000$)
+                </label>
+            </div>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </div>
 
-     <div>
-     <h2>STICKERS </h2>
+        <div class="producto" data-name="Real Hasta La Muerte - Anuel AA" data-price="15000" data-vinyl-price="10000">
+            <a href="https://youtu.be/we6IbJrfoGQ?si=_KMeiYXA87-b6-Zd" target="_blank">
+                <img src="discos/real.jpg" width="300" height="300" alt="Real Hasta La Muerte - Anuel AA">
+            </a>
+            <p>Real Hasta La Muerte - Anuel AA - 15000$</p>
+            <div class="opcion-vinilo">
+                <label class="etiqueta-vinilo">
+                    <input type="checkbox"> versión en Vinilo (+10000$)
+                </label>
+            </div>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </div>
+    </section>
 
-      <div>
-       <img src="sticker/CRO.jpg" width="100" height="100" title="CRO DIOS">
-       
-       <button class="boton-carrito">Agregar al carrito</button>
-      </div>
-     
-     <div>
-      <img src="sticker/DALE RIVER.jpg" width="100" height="100" title="grande hay 1 solo">
-      <button class="boton-carrito">Agregar al carrito</button>
-     </div>
-     
-     <div>
-    <img src="sticker/dragon.jpg" width="100" height="100" title="estas celoso ">
-    <button class="boton-carrito">Agregar al carrito</button>
-     </div>
-    
-  <div>
-   <img src="sticker/jaja.jpg" width="100" height="100" title="zeko es una banda">
-    <button class="boton-carrito">Agregar al carrito</button>
-  </div>
-     
-   <div>
-    <img src="sticker/mondongo.jpg" width="100" height="100" title="mondongo dragon ball">
-    <button class="boton-carrito">Agregar al carrito</button>
-   </div>
-     
+    <section id="stickers">
+        <h2>Stickers</h2>
+
+    <div class="producto" data-name="Sticker CRO" data-price="1200">
+        <img src="sticker/CRO.jpg" width="100" height="100" title="CRO DIOS" alt="Sticker CRO">
+        <p>Sticker CRO - 1200$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
     </div>
 
-    <div>
-        <h3>LIBROS</h3>
+    <div class="producto" data-name="Sticker DALE RIVER" data-price="1200">
+        <img src="sticker/DALE RIVER.jpg" width="100" height="100" title="grande hay 1 solo" alt="Sticker DALE RIVER">
+        <p>Sticker DALE RIVER - 1200$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
     </div>
 
-    <div>
-    <img src="libros/anafrank.jpg" width="300" height="400">
-    <div class="opciones-tapa">
-        
-        
-        <label class="opcion-radio"> 
-            <input type="radio" name="tipo-tapa-libro1" value="blanda" checked> 
-            tapa blanda
-        </label>
-        
-        <label class="opcion-radio">
-            <input type="radio" name="tipo-tapa-libro1" value="dura"> 
-            tapa dura
-         
-        </label>
-    </div>
-     <button class="boton-carrito">Agregar al carrito</button>
+    <div class="producto" data-name="Sticker Dragon" data-price="1200">
+        <img src="sticker/dragon.jpg" width="100" height="100" title="estas celoso" alt="Sticker Dragon">
+        <p>Sticker Dragon - 1200$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
     </div>
 
-    <div>
-    <img src="libros/cesar.jpg" width="300" height="400">
-    <div class="opciones-tapa">
-        
-        
-        <label class="opcion-radio"> 
-            <input type="radio" name="tipo-tapa-libro1" value="blanda" checked> 
-            tapa blanda
-        </label>
-        
-        <label class="opcion-radio">
-            <input type="radio" name="tipo-tapa-libro1" value="dura"> 
-         tapa dura
-        </label>
-    </div>
-    <button class="boton-carrito">Agregar al carrito</button>
+    <div class="producto" data-name="Sticker Jaja" data-price="1200">
+        <img src="sticker/jaja.jpg" width="100" height="100" title="zeko es una banda" alt="Sticker Jaja">
+        <p>Sticker Jaja - 1200$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
     </div>
 
-    <div>
-    <img src="libros/it.jpg" width="300" height="400">
-    <div class="opciones-tapa">
-        
-        
-        <label class="opcion-radio"> 
-            <input type="radio" name="tipo-tapa-libro1" value="blanda" checked> 
-            tapa blanda
-        </label>
-        
-        <label class="opcion-radio">
-            <input type="radio" name="tipo-tapa-libro1" value="dura"> 
-         tapa dura
-        </label>
+    <div class="producto" data-name="Sticker Mondongo" data-price="1200">
+        <img src="sticker/mondongo.jpg" width="100" height="100" title="mondongo dragon ball" alt="Sticker Mondongo">
+        <p>Sticker Mondongo - 1200$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
     </div>
-    <button class="boton-carrito">Agregar al carrito</button>
- </div>
+    </section>
 
- <div>
-    <img src="libros/magno.jpg" width="300" height="400">
-    <div class="opciones-tapa">
-        
-        
-        <label class="opcion-radio"> 
-            <input type="radio" name="tipo-tapa-libro1" value="blanda" checked> 
-            tapa blanda
-        </label>
-        
-        <label class="opcion-radio">
-            <input type="radio" name="tipo-tapa-libro1" value="dura"> 
-            tapa dura
-         
-        </label>
-    </div>
-     <button class="boton-carrito">Agregar al carrito</button>
- </div>
+    <section id="libros">
+        <h2>Libros</h2>
 
-    <div>
-    <img src="libros/napoleon.jpg" width="300" height="400">
-    <div class="opciones-tapa">
-        
-        
-        <label class="opcion-radio"> 
-            <input type="radio" name="tipo-tapa-libro1" value="blanda" checked> 
-            tapa blanda
-        </label>
-        
-        <label class="opcion-radio">
-            <input type="radio" name="tipo-tapa-libro1" value="dura"> 
-         tapa dura
-        </label>
-    </div>
-      <button class="boton-carrito">Agregar al carrito</button>
+        <div class="producto" data-name="Ana Frank" data-price="2500">
+            <img src="libros/anafrank.jpg" width="300" height="400" alt="Ana Frank">
+            <div class="opciones-tapa">
+                <label class="opcion-radio">
+                    <input type="radio" name="tapa-anafrank" value="blanda" checked> tapa blanda
+                </label>
+                <label class="opcion-radio">
+                    <input type="radio" name="tapa-anafrank" value="dura"> tapa dura
+                </label>
+            </div>
+            <p>Ana Frank - 2500$</p>
+            <button class="boton-carrito">Agregar al carrito</button>
+        </div>
+
+    <div class="producto" data-name="Cesar" data-price="2500">
+        <img src="libros/cesar.jpg" width="300" height="400" alt="Cesar">
+        <div class="opciones-tapa">
+            <label class="opcion-radio">
+                <input type="radio" name="tapa-cesar" value="blanda" checked> tapa blanda
+            </label>
+            <label class="opcion-radio">
+                <input type="radio" name="tapa-cesar" value="dura"> tapa dura
+            </label>
+        </div>
+        <p>Cesar - 2500$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
     </div>
 
+    <div class="producto" data-name="It" data-price="2500">
+        <img src="libros/it.jpg" width="300" height="400" alt="It">
+        <div class="opciones-tapa">
+            <label class="opcion-radio">
+                <input type="radio" name="tapa-it" value="blanda" checked> tapa blanda
+            </label>
+            <label class="opcion-radio">
+                <input type="radio" name="tapa-it" value="dura"> tapa dura
+            </label>
+        </div>
+        <p>It - 2500$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-name="Magno" data-price="2500">
+        <img src="libros/magno.jpg" width="300" height="400" alt="Magno">
+        <div class="opciones-tapa">
+            <label class="opcion-radio">
+                <input type="radio" name="tapa-magno" value="blanda" checked> tapa blanda
+            </label>
+            <label class="opcion-radio">
+                <input type="radio" name="tapa-magno" value="dura"> tapa dura
+            </label>
+        </div>
+        <p>Magno - 2500$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-name="Napoleon" data-price="2500">
+        <img src="libros/napoleon.jpg" width="300" height="400" alt="Napoleon">
+        <div class="opciones-tapa">
+            <label class="opcion-radio">
+                <input type="radio" name="tapa-napoleon" value="blanda" checked> tapa blanda
+            </label>
+            <label class="opcion-radio">
+                <input type="radio" name="tapa-napoleon" value="dura"> tapa dura
+            </label>
+        </div>
+        <p>Napoleon - 2500$</p>
+        <button class="boton-carrito">Agregar al carrito</button>
+    </div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito</h2>
+        <div id="carrito-contenido">Carrito vacío</div>
+        <p id="carrito-total"></p>
+    </section>
+
+    <script>
+        const cart = [];
+        const carritoContenido = document.getElementById('carrito-contenido');
+        const carritoTotal = document.getElementById('carrito-total');
+
+        function actualizarCarrito() {
+            if (cart.length === 0) {
+                carritoContenido.textContent = 'Carrito vacío';
+                carritoTotal.textContent = '';
+                return;
+            }
+
+            carritoContenido.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'carrito-item';
+                itemDiv.textContent = `${index + 1}. ${item.name} - ${item.price}$`;
+                carritoContenido.appendChild(itemDiv);
+                total += item.price;
+            });
+
+            if (total > 10000) {
+                const discount = total * 0.05;
+                const totalConDescuento = total - discount;
+                carritoTotal.textContent = `Total: ${total}$ | Total con 5% de descuento: ${Math.round(totalConDescuento)}$`;
+            } else {
+                carritoTotal.textContent = `Total: ${total}$`;
+            }
+        }
+
+        function agregarAlCarrito(productoElemento) {
+            const name = productoElemento.dataset.name;
+            let price = Number(productoElemento.dataset.price) || 0;
+            const viniloCheckbox = productoElemento.querySelector('input[type="checkbox"]');
+
+            if (viniloCheckbox && viniloCheckbox.checked) {
+                price += Number(productoElemento.dataset.vinylPrice || 0);
+            }
+
+            cart.push({ name, price });
+            actualizarCarrito();
+        }
+
+        document.querySelectorAll('.boton-carrito').forEach(button => {
+            button.addEventListener('click', () => {
+                const producto = button.closest('.producto');
+                if (!producto) return;
+                agregarAlCarrito(producto);
+            });
+        });
+    </script>
 </body>
-
+</html>
